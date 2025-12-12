@@ -1,0 +1,70 @@
+{
+  "expo": {
+    "name": "PetAlert",
+    "slug": "petalert-milagros",
+    "scheme": "petalert",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.petalert.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Necesitamos tu ubicación para mostrarte mascotas perdidas cerca de ti y enviarte alertas de reportes cercanos.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Necesitamos tu ubicación incluso en segundo plano para enviarte alertas cuando se reporte una mascota perdida cerca de ti.",
+        "NSLocationAlwaysUsageDescription": "Necesitamos tu ubicación en segundo plano para enviarte alertas de mascotas perdidas cercanas.",
+        "UIBackgroundModes": ["location", "remote-notification"],
+        "NSCameraUsageDescription": "Necesitamos acceso a la cámara para tomar fotos de mascotas.",
+        "NSPhotoLibraryUsageDescription": "Necesitamos acceso a tus fotos para seleccionar imágenes."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.petalert.app",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Necesitamos tu ubicación incluso en segundo plano para enviarte alertas cuando se reporte una mascota perdida cerca de ti.",
+          "locationWhenInUsePermission": "Necesitamos tu ubicación para mostrarte mascotas perdidas cerca de ti y enviarte alertas de reportes cercanos.",
+          "isAndroidBackgroundLocationEnabled": true,
+          "isAndroidForegroundServiceEnabled": true
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Necesitamos acceso a tus fotos para seleccionar imágenes.",
+          "cameraPermission": "Necesitamos acceso a la cámara para tomar fotos de mascotas."
+        }
+      ],
+      "expo-secure-store",
+      "expo-web-browser",
+      "expo-font"
+    ]
+  }
+}

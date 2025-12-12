@@ -1,0 +1,40 @@
+node_modules/
+.expo/
+.vscode/
+backend/.venv/
+__pycache__/
+dist/
+build/
+.DS_Store
+Thumbs.db
+
+# Builds de APK/AAB
+*.apk
+*.aab
+*.ipa
+
+# Archivos de credenciales y secretos
+backend/google-vision-key.json
+*.json.key
+*-key.json
+.env
+backend/.env
+.env.local
+.env.production
+
+# Archivos de documentación
+docs/
+specs/
+
+# Backups
+backup-pre-maps-fix/
+*.backup
+
+# Logs
+*.log
+logs/
+backend/logs/
+
+# Configuración local y herramientas de desarrollo
+.specify/
+.cursor/
